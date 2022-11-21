@@ -6,78 +6,64 @@
   * [Overview](#overview)
   * [Dataset Information](#dataset)
   * [Motivation](#motivation)
-  * [Demo](#demo)
   * [Steps in the project execution](#Learning-Objective)
   * [Technical Aspect](#technical-aspect)
   * [Technologies Used](#technologies-used)
   * [Installation](#installation)
-  * [Note](#note)
 
 
 
 ### Overview 
-A Bank’s profit and loss depend on the amount of the loans that is whether the client or customer is paying back the loan. Recovery of loans is the most tedious task for the banking sector. 
+Customer Personality Analysis is a detailed analysis of a company’s ideal customers. It helps a business to better understand its customers and makes it easier for them to modify products according to the specific needs, behaviors and concerns of different types of customers.
 
-Dream Housing Finance company deals in all kinds of home loans. They have a presence across all urban, semi-urban and rural areas. The customer first applies for a home loan and after that, the company validates the customer eligibility for the loan.
+Customer personality analysis helps a business to modify its product based on its target customers from different types of customer segments. For example, instead of spending money to market a new product to every customer in the company’s database, a company can analyze which customer segment is most likely to buy the product and then market the product only on that particular segment.
 
-The company wants to automate the loan eligibility process (real-time) based on customer detail provided while filling out online application forms. These details are Gender, Marital Status, Education, number of Dependents, Income, Loan Amount, Credit History, and others.
-
-To automate this process, they have provided a dataset to identify the customer segments that are eligible for loan amounts so that they can specifically target these customers.
-
- The historical data of candidates was used to build a machine learning model using different classification algorithms. The main objective of this project is to predict whether a new applicant granted the loan or not using machine learning models trained on the historical data set.
-
-
-In this project, let's apply machine learning techniques and develop a web based application to predict the loan eligibility of new applicant.
+In this project, let's apply machine learning techniques and perform customer personality analysis & learn some key observations to develop the business strategy.
 
 
 ### Dataset Information
-Variable	          Description
-
-Loan_ID	            Unique Loan ID
-
-Gender	            Male/ Female
-
-Married	            Applicant married (Y/N)
-
-Dependents	        Number of dependents
-
-Education	         Applicant Education (Graduate/ Under Graduate)
-
-Self_Employed	      Self employed (Y/N)
-
-ApplicantIncome	    Applicant income
-
-CoapplicantIncome	  Coapplicant income
-
-LoanAmount	Loan    amount in thousands
-
-Loan_Amount_Term	  Term of loan in months
-
-Credit_History	    credit history meets guidelines
-
-Property_Area	      Urban/ Semi Urban/ Rural
-
-Loan_Status	        Loan approved (Y/N)
+Features:
+People
+ID: Customer's unique identifier
+Year_Birth: Customer's birth year
+Education: Customer's education level
+Marital_Status: Customer's marital status
+Income: Customer's yearly household income
+Kidhome: Number of children in customer's household
+Teenhome: Number of teenagers in customer's household
+Dt_Customer: Date of customer's enrollment with the company
+Recency: Number of days since customer's last purchase
+Complain: 1 if the customer complained in the last 2 years, 0 otherwise
 
 
-Final dataset: 615 observations
+Products
+MntWines: Amount spent on wine in last 2 years
+MntFruits: Amount spent on fruits in last 2 years
+MntMeatProducts: Amount spent on meat in last 2 years
+MntFishProducts: Amount spent on fish in last 2 years
+MntSweetProducts: Amount spent on sweets in last 2 years
+MntGoldProds: Amount spent on gold in last 2 years
 
-Dataset used in this project can be found here : [Dataset] https://www.kaggle.com/datasets/ninzaami/loan-predication
+Promotion
+NumDealsPurchases: Number of purchases made with a discount
+AcceptedCmp1: 1 if customer accepted the offer in the 1st campaign, 0 otherwise
+AcceptedCmp2: 1 if customer accepted the offer in the 2nd campaign, 0 otherwise
+AcceptedCmp3: 1 if customer accepted the offer in the 3rd campaign, 0 otherwise
+AcceptedCmp4: 1 if customer accepted the offer in the 4th campaign, 0 otherwise
+AcceptedCmp5: 1 if customer accepted the offer in the 5th campaign, 0 otherwise
+Response: 1 if customer accepted the offer in the last campaign, 0 otherwise
+
+Place
+NumWebPurchases: Number of purchases made through the company’s website
+NumCatalogPurchases: Number of purchases made using a catalogue
+NumStorePurchases: Number of purchases made directly in stores
+NumWebVisitsMonth: Number of visits to company’s website in the last month
+
+Dataset used in this project can be found here : [Dataset] https://www.kaggle.com
 
 
 ### Motivation
-The motivation was to use machine learning experiments to try to automate the loan eligibility process with low risk & better recovery.
-
-Idea is to implement the end to end machine learning project while using free deployment platform like Heroku.
-
-
-
-### Demo
-[Visit this link for Web application](https://loanwebapp7.herokuapp.com/)
-
-Web application Snapshot:
-
-<img target="_blank" src="https://github.com/dipakml/Prediction-of-Modernized-Loan-Approval-System-/blob/master/webapp_snapshot.png" width=800>
+The motivation was to use machine learning technique to get the insights from customer profile for developing business strategy.
 
 
 
@@ -93,17 +79,14 @@ Web application Snapshot:
 
 ### Technical Aspect 
 
-- Training a machine learning model using scikit-learn. 
-- Building and hosting a streamlit web app on Heroku. 
-- A user has to input key features.
-- Once it gets all the fields information , the prediction is displayed. 
+- Creating unsupervised machine learning model to create clusters of customers. 
+- Data Visualization for finding out the patterns in the data.
+
 
 
 ### Technologies Used  
 ![](https://forthebadge.com/images/badges/made-with-python.svg) 
 
-<img target="_blank" src="https://github.com/dipakml/Prediction-of-Concrete-Compressive-Strength/blob/master/Logo_Images/streamlit.png" width=160>
-<img target="_blank" src="https://github.com/dipakml/Prediction-of-Concrete-Compressive-Strength/blob/master/Logo_Images/heroku.png" width=160>
 <img target="_blank" src="https://github.com/dipakml/Prediction-of-Concrete-Compressive-Strength/blob/master/Logo_Images/numpy.png" width=160>
 <img target="_blank" src="https://github.com/dipakml/Prediction-of-Concrete-Compressive-Strength/blob/master/Logo_Images/pandas.jpeg" width=160>
 
@@ -112,9 +95,5 @@ Web application Snapshot:
 - After downloading, cd into the working directory.
 - Begin a new virtual environment with Python 3 and activate it.
 - Install the required packages using pip install -r requirements.txt
-- Execute the command: streamlit run app.py
 
-
-### Note:
-- Webapp can handle concurrency upto some extent but can be scaled.
 
