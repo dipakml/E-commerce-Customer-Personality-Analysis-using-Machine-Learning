@@ -88,7 +88,7 @@ NumStorePurchases: Number of purchases made directly in stores
 
 NumWebVisitsMonth: Number of visits to company’s website in the last month
 
-Dataset used in this project can be found here : [Dataset] https://www.kaggle.com
+Dataset used in this project can be found here : [Dataset](https://www.kaggle.com/)
 
 
 ### Motivation
