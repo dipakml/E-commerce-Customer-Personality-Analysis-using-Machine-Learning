@@ -102,9 +102,8 @@ The motivation was to use machine learning technique to get the insights from cu
 - Descriptive Analysis 
 - Data Visualizations 
 - Data Preprocessing 
-- Data Modelling 
-- Model Evaluation 
-- Model Deployment 
+- Data Modelling(Clustering)
+- Documenting the insights
 
 ### Technical Aspect 
 
